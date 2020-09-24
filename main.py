@@ -100,7 +100,7 @@ def get(update, context):
 if __name__ == '__main__':
     updater = Updater(token=Token, use_context=True)
     dp = updater.dispatcher
-    
+
     dp.add_handler(CommandHandler('put', put, filters=Filters.chat((ChatID,))))
     dp.add_handler(CommandHandler('get', get, filters=Filters.chat((ChatID,))))
     dp.add_handler(CommandHandler('gettot', getTotal, filters=Filters.chat((ChatID,))))
